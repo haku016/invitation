@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">📨 invitation.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">❏</button>
+                <button aria-label="Close" onclick="showPopup()">X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>Enter your name to receive your invitation:</p>
+            <p>Example: Nguyen Van A</p>
+            <input type="text" id="nameInput" placeholder="Enter your name" onkeypress="handleKeyPress(event)">
+            <button onclick="checkName()">Submit</button>
+            <p id="message"></p>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-title-bar">
+            <div class="popup-title-bar-text">🔪 threaten.exe</div>
+            <div class="popup-title-bar-controls">
+                <button aria-label="Close" class="popup-close" onclick="showAnotherPopup()">X</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <span class="popup-icon">??!!!!!</span>
+            <div class="popup-body">
+                <p>Are you trying to reject my invitation? Nah, you can't escape you fool!</p>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-close" onclick="hidePopup()">I'll be there...</button>
+            </div>
+        </div>
+    </div>
+    <div id="anotherPopup" class="popup">
+        <div class="popup-title-bar">
+            <div class="popup-title-bar-text">⚠️ ???.exe</div>
+            <div class="popup-title-bar-controls">
+                <button aria-label="Close" class="popup-close" onclick="hideAnotherPopup()">X</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <div class="popup-body">
+                <p>I'm still here. Don't even try to run, now accept it! 👺</p>
+            </div>
+        </div>
+    </div>
+    <div id="oopsPopup" class="popup">
+        <div class="popup-title-bar">
+            <div class="popup-title-bar-text">⚠️ sus.exe</div>
+            <div class="popup-title-bar-controls">
+                <button aria-label="Close" class="popup-close" onclick="hideOopsPopup()">X</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <div class="popup-body">
+                <p>Oopsie! You are not invited. How shame! 😏</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

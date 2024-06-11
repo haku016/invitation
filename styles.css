@@ -1,0 +1,186 @@
+/* styles.css */
+body {
+    font-family: 'VT323', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #008080; /* Teal background color */
+    margin: 0;
+    color: #000;
+    background-image: url('window98.jpg'); /* Replace 'background_image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    padding: 0; /* Remove default padding */
+}
+
+.window {
+    border: 2px solid #000;
+    width: 500px;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #000080, #0000FF);
+    padding: 2px;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.title-bar-text {
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.title-bar-controls {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.title-bar-controls button {
+    font-family: 'VT323', monospace;
+    width: 20px;
+    height: 20px;
+    background: #C0C0C0;
+    border: 2px solid #FFF;
+    margin: 0 1px;
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #808080;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-bar-controls button:active {
+    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #808080;
+}
+
+.window-body {
+    background: #C0C0C0;
+    padding: 10px;
+    box-shadow: inset 2px 2px 0 #FFF, inset -2px -2px 0 #808080;
+    font-size: 20px;
+}
+
+input {
+    font-family: 'VT323', monospace;
+    width: 97%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 2px solid #808080;
+    box-shadow: inset 1px 1px 0 #FFF, inset -1px -1px 0 #000;
+    font-size: 20px;
+}
+
+button {
+    font-family: 'VT323', monospace;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 2px solid #808080;
+    background: #C0C0C0;
+    box-shadow: inset 1px 1px 0 #FFF, inset -1px -1px 0 #000;
+    cursor: pointer;
+    font-size: 22px;
+
+}
+
+button:active {
+    box-shadow: inset -1px -1px 0 #FFF, inset 1px 1px 0 #000;
+}
+
+#message {
+    margin-top: 10px;
+    padding: 5px;
+    background: #C0C0C0;
+}
+/* Add this CSS to your existing styles.css or create a new one */
+
+.popup {
+    display: none; /* Hide the popup by default */
+    position: fixed; /* Position the popup */
+    z-index: 9999; /* Ensure the popup is on top of other elements */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Popup background color */
+    border: 2px solid #000000; /* Popup border */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Popup shadow */
+    font-family: 'VT323', monospace; /* Font family */
+    width: 500px; /* Adjust the width as needed */
+}
+
+.popup-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #000080, #0000FF);
+    padding: 2px;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+.popup-title-bar-text {
+    padding-left: 5px;
+    font-size: 18px;
+}
+.popup-title-bar-controls {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+.popup-title-bar-controls button {
+    font-family: 'VT323', monospace;
+    width: 20px;
+    height: 20px;
+    background: #C0C0C0;
+    border: 2px solid #FFF;
+    margin: 0 1px;
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #808080;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    padding: 10px;
+}
+
+.popup-icon {
+    font-size: 24px;
+    color: #ff0000; /* Warning icon color */
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.popup-body {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.popup-footer {
+    text-align: center;
+}
+
+.popup-close {
+    background-color: #008080; /* Close button background color */
+    color: #ffffff; /* Close button text color */
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.popup-close:hover {
+    background-color: #006666; /* Close button background color on hover */
+}
+

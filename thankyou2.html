@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">🍒thankYou.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="goBack()">_</button>
+                <button aria-label="Maximize" onclick="showAnotherPopup()">❏</button>
+                <button aria-label="Close" onclick="showAnotherPopup()">X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <h1>Congratulation!</h1>
+            <p>Mình Quốc Khang, xin mời bạn đến dự lễ tốt nghiệp của mình.</p>
+            <p>Thông tin lễ tốt nghiệp:</p>
+            <ul>
+                <li>Ngày: Thứ bảy, Ngày 22 Tháng 6 Năm 2024</li>
+                <li>Thời gian: 10:30 - 12:30</li>
+                <li>Địa điểm: Trường Đại học Sư Phạm Kĩ Thuật TP HCM</li>
+                <li>Dress code: Để cho vui thôi chứ bận gì cũng được =))</li>
+                <li>Nếu có vấn đề gì liên hệ mình qua số điện thoại 0355813471</li>
+            </ul>
+            <p>Note: Sự hiện diện của bạn là món quà quý giá nhất của mình. Seriouly, for real. Ý là chỉ cần tặng mình một tấm hình làm kỉ niệm là đủ quý rồi.</p>
+            <p>I look forward to seeing you there! 💖</p>
+            <button onclick="showMapPopup()">Map</button>
+        </div>
+        
+    </div>
+    <div id="anotherPopup" class="popup">
+        <div class="popup-title-bar">
+            <div class="popup-title-bar-text">notification.exe</div>
+            <div class="popup-title-bar-controls">
+                <button aria-label="Close" class="popup-close" onclick="hideAnotherPopup()">X</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <div class="popup-body">
+                <p>Congratulation you have found a secret button (Not that secret but yeah)</p>
+                <p>✨Time is the only magic that exists. Let it guides us✨</p>
+            </div>
+        </div>
+    </div>
+    <div id="mapPopup" class="popup">
+        <div class="popup-title-bar">
+            <div class="popup-title-bar-text">parkingMap.exe</div>
+            <div class="popup-title-bar-controls">
+                <button aria-label="Close" class="popup-close" onclick="hideMap()">X</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <img src="map.jpg" alt="Map Image" style="max-width: 100%; height: auto;">
+            <p>A B mình vẽ trên map là 2 bãi giữ xe của trường mình. Còn C là bãi giữ xe của Coopmart, nếu như mà bãi trường đầy quá mà hết cứu thì mấy bạn có thể qua bển gửi tạm rồi đi bộ qua cũng được (not recommend tại vì trước sinh viên trường gửi ở đó nhiều nên là giờ người ta gắt hơn rồi. Nhưng mà nếu khó khăn qua thì qua đỗ tạm cũng được)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
