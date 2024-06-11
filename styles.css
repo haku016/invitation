@@ -14,13 +14,12 @@ body {
     background-repeat: no-repeat; /* Do not repeat the background image */
     padding: 0; /* Remove default padding */
 }
-
 .window {
     border: 2px solid #000;
-    width: 500px;
+    width: 90%; /* Adjusted width to 90% for responsiveness */
+    max-width: 500px; /* Maximum width */
     box-shadow: 3px 3px 0 #000;
 }
-
 .title-bar {
     display: flex;
     justify-content: space-between;
@@ -101,8 +100,7 @@ button:active {
     padding: 5px;
     background: #C0C0C0;
 }
-/* Add this CSS to your existing styles.css or create a new one */
-
+/* Popup styles */
 .popup {
     display: none; /* Hide the popup by default */
     position: fixed; /* Position the popup */
@@ -114,7 +112,9 @@ button:active {
     border: 2px solid #000000; /* Popup border */
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Popup shadow */
     font-family: 'VT323', monospace; /* Font family */
-    width: 500px; /* Adjust the width as needed */
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 400px; /* Limit the maximum width */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .popup-title-bar {
@@ -127,15 +127,18 @@ button:active {
     font-weight: bold;
     border-bottom: 2px solid #000;
 }
+
 .popup-title-bar-text {
     padding-left: 5px;
     font-size: 18px;
 }
+
 .popup-title-bar-controls {
     display: flex;
     flex-direction: row; 
     align-items: center;
 }
+
 .popup-title-bar-controls button {
     font-family: 'VT323', monospace;
     width: 20px;
@@ -150,6 +153,7 @@ button:active {
     justify-content: center;
     align-items: center;
 }
+
 .popup-content {
     padding: 10px;
 }
@@ -183,4 +187,13 @@ button:active {
 .popup-close:hover {
     background-color: #006666; /* Close button background color on hover */
 }
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .window {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
 
+    .popup {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+}

@@ -1,12 +1,14 @@
 // script.js
-const validNames1 = ['Tran Le Nhu Quynh','Nguyen Truong Thien An', 'Dinh Quoc Paul', 'Bui The Hung', 'Le Quoc Vinh', 'Luu Thanh Tung', 'Dinh Duc Luong','Chiem Tan Thinh','Phan Duc Thinh','Tran Thanh Luy','Nguyen Hong Lien','Nguyen Quang Huy','Le Ngoc Man Nghi','Vuong Luc Tue Nhi','Tran Ngoc Bao Chau','Ho Tan Thuc','Vu Thi Ngoc Anh','Nguyen Thai Binh', 'Tran Nguyen Nhu Loc','Truong Thanh Hung','Truong Thi Minh Thu','Vo Yen Vy','Do Hoang Phuong Thao','Ha Thu Thao'];
-const validNames2 = ['Ho Le Doan Thuc','donthut','eiridy','morning','Cụt','Mít','nyc','qk','bibo lien'];
+const validNames1 = ['Trần Lê Như Quỳnh','Nguyễn Trương Thiên Ân', 'Đinh Quốc Paul', 'Bùi Thế Hưng', 'Lê Quốc Vinh', 'Lưu Thanh Tùng', 'Đinh Đức Lương','Chiêm Tấn Thịnh','Phan Đức Thịnh','Trần Thành Lũy','Nguyễn Hồng Liên','Nguyễn Quang Huy','Lê Ngọc Mẫn Nghi','Vương Lục Tuệ Nhi','Trần Ngọc Bảo Châu','Hồ Tấn Thức','Vũ Thị Ngọc Anh','Nguyễn Thái Bình', 'Trần Nguyễn Như Lộc','Trương Thành Hưng','Trương Thị Minh Thư','Võ Yến Vy','Đỗ Hoàng Phương Thảo','Hà Thu Thảo'];
+const validNames2 = ['Hồ Lê Đoan Thục','donthut','eiridy','morning','Cụt','Mít','nyc','qk','bibo liên'];
 function checkName() {
     const nameInput = document.getElementById('nameInput').value.trim(); // Trim whitespace
 
     if (validNames1.includes(nameInput)) {
+        localStorage.setItem('guestName', nameInput);
         window.location.href = 'thankyou1.html';
     } else if (validNames2.includes(nameInput)) {
+        localStorage.setItem('guestName', nameInput);
         window.location.href = 'thankyou2.html';
     } else {
         document.getElementById("oopsPopup").style.display = "block";
@@ -44,3 +46,9 @@ function handleKeyPress(event) {
         checkName();
     }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+    const guestName = localStorage.getItem('guestName');
+    if (guestName) {
+        document.getElementById('guestName').textContent = guestName;
+    }
+});
